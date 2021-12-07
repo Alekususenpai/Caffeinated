@@ -1,0 +1,44 @@
+[
+          {
+                    "id": "1",
+                    "name": "Mikasa Ackerman",
+                    "Position": "104th Trainees Squad, Scouting Legion",
+                    "Graduation rank": "1st"
+          },
+          {
+                    "id": "2",
+                    "name": "Eren Yeager",
+                    "Position": "104th Trainees Squad, Scouting Legion",
+                    "Graduation rank": "5th"
+          },
+          {
+                    "id": "3",
+                    "name": "Armin Arlert",
+                    "Position": "104th Trainees Squad, Scouting Legion",
+                    "Graduation rank": "Outside the top 10"
+          },
+          {
+                    "id": "4",
+                    "name": "Sasha Blouse",
+                    "Position": "104th Trainees Squad, Scouting Legion",
+                    "Graduation rank": "9th"
+          },
+          {
+                    "id": "5",
+                    "name": "Levi",
+                    "Position": "Scouting Legion, Special Operations Squad",
+                    "Graduation rank": "Captain of the Scouting Legion division"
+          },
+          {
+                    "id": "6",
+                    "name": "Erwin Smith",
+                    "Position": "Scouting Legion",
+                    "Graduation rank": "Commander of the Scouting Legion"
+          },
+          {
+                    "id": "7",
+                    "name": "Hange Zoë ",
+                    "Position": "Scouting Legion",
+                    "Graduation rank": "Scouting Legion's Squad Leader."
+          }
+]
