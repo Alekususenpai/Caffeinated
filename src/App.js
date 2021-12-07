@@ -1,19 +1,17 @@
-import react, { Component } from 'react'
+import React, { Component } from 'react'
 import './App.css';
+import Cards from './components/Cards'
+
+
 
 class App extends Component {
-  constructor() {
-    super();
-
-    this.state = {
-      characters: []
-    };
+  render() {
+    return (
+      <div className="App">
+        <Cards></Cards>
+      </div>
+    )
   }
-
-  componentDidMount() {
-    fetch('')
-  }
-
 }
 
 export default App;
