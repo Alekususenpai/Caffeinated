@@ -1,24 +1,10 @@
-body {
-  margin: 0;
-  background-image: url("./fakurian-design-PGdW_bHDbpI-unsplash.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .App {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  text-align: center;
+  margin: 0 auto;
 }
 
-.card {
-  width: 26%;
-  margin-bottom: 3rem;
-  padding: 0 1em;
-  border-radius: 0.6em;
-  background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+h1 {
+  font-family: "Bigelow Rules";
+  font-size: 3rem;
+  color: #0ccac4;
 }
