@@ -1,29 +1,29 @@
-import React, { Component } from 'react'
-import { CardList } from './components/CardList/CardList'
+import { Component } from 'react'
 import './App.css';
+import CardList from './components/CardList/CardList';
 
 class App extends Component {
-  constructor() {
-    super();
-
+  constructor(props) {
+    super(props)
     this.state = {
-      monsters: []
-    };
+      coffee: []
+    }
   }
 
   componentDidMount() {
-    fetch('https://jsonplaceholder.typicode.com/users')
+    fetch('https://api.sampleapis.com/coffee/hot')
       .then(response => response.json())
-      .then(users => this.setState({ monsters: users }))
+      .then(data => this.setState({coffee: data}))
+
   }
   render() {
     return (
-      <div className='App'>
-        <h1>Monsters Rolodex</h1>
-        <CardList monsters={this.state.monsters} />
-      </div>
+      <CardList data={this.state.coffee}>Hello there</CardList>
     )
   }
 }
+
+
+
 
 export default App
