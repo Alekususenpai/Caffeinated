@@ -1,13 +1,15 @@
-import React from "react";
-import { Card } from "../Card/Card";
-import "./CardList.css";
+import Card from "../Card/Card";
 
-export const CardList = (props) => {
+import React from "react";
+
+function CardList({ data }) {
   return (
-    <div className="card-list">
-      {props.monsters.map((monster) => (
-        <Card key={monster.id} monster={monster} />
+    <div>
+      {data.map((coffee) => (
+        <Card key={coffee.id} coffee={coffee}/>
       ))}
     </div>
   );
-};
+}
+
+export default CardList;
