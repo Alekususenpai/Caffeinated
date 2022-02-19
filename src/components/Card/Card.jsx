@@ -1,12 +1,17 @@
 import React from "react";
-import "./Card.css";
 
-export const Card = (props) => {
+function Card({ coffee }) {
   return (
-    <div className="card-container">
-      <img alt="monster" src={`https://robohash.org/${props.monster.id}`} />
-      <h2>{props.monster.name}</h2>
-      <p>{props.monster.email}</p>
+    <div>
+      <h2>{coffee.title}</h2>
+      <p>{coffee.description}</p>
+      <ol>
+        {coffee.ingredients.map((ingredients) => (
+          <li>{ingredients}</li>
+        ))}
+      </ol>
     </div>
   );
-};
+}
+
+export default Card;
