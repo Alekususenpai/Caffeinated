@@ -1,24 +1,34 @@
 import { Component } from 'react'
 import './App.css';
 import CardList from './components/CardList/CardList';
+import SearchBar from './components/SearchBar/SearchBar';
 
 class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      coffee: []
+      coffee: [],
+      searchBar: ''
     }
   }
+
 
   componentDidMount() {
     fetch('https://api.sampleapis.com/coffee/hot')
       .then(response => response.json())
-      .then(data => this.setState({coffee: data}))
+      .then(data => this.setState({ coffee: data }))
 
   }
   render() {
+
+    const { coffee, searchBar } = this.state;
+    const filteredCoffees = coffee.filter(coffees => coffees.title.toLowerCase().includes(searchBar.toLowerCase()))
+
     return (
-      <CardList data={this.state.coffee}>Hello there</CardList>
+      <div>
+        <SearchBar placeholder='Type a coffee' handleChange={e => this.setState({ searchBar: e.target.value })} />
+        <CardList data={filteredCoffees}>Hello there</CardList>
+      </div>
     )
   }
 }
