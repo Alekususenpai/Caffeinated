@@ -3,11 +3,13 @@ import "./SearchBar.css";
 
 function SearchBar({ placeholder, handleChange }) {
   return (
-    <input
-      type="search"
-      placeholder={placeholder}
-      onChange={handleChange}
-    ></input>
+    <div className="search">
+      <input
+        type="search"
+        placeholder={placeholder}
+        onChange={handleChange}
+      ></input>
+    </div>
   );
 }
 
