@@ -19,14 +19,18 @@ class App extends Component {
       .then(data => this.setState({ coffee: data }))
 
   }
-  render() {
 
+  handleChange = (e) => {
+    this.setState({ searchBar: e.target.value })
+  }
+
+  render() {
     const { coffee, searchBar } = this.state;
     const filteredCoffees = coffee.filter(coffees => coffees.title.toLowerCase().includes(searchBar.toLowerCase()))
 
     return (
       <div>
-        <SearchBar placeholder='Type a coffee' handleChange={e => this.setState({ searchBar: e.target.value })} />
+        <SearchBar placeholder='Type a coffee' handleChange={this.handleChange} />
         <CardList data={filteredCoffees}>Hello there</CardList>
       </div>
     )
