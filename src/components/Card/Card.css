@@ -1,17 +1,47 @@
-.card-container {
+
+.card {
+  border: solid 5px rgb(2, 0, 128);
+  position: relative;
+  max-width: 300px;
+  height: 215px;
+  background-color: #fff;
+  margin: 30px 10px;
+  padding: 20px 15px;
   display: flex;
   flex-direction: column;
-  background-color: #95dada;
-  border: 1px solid grey;
-  border-radius: 5px;
-  padding: 25px;
-  cursor: pointer;
-  -moz-osx-font-smoothing: grayscale;
-  backface-visibility: hidden;
-  transform: translateZ(0);
-  transition: transform 0.25s ease-out;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease-in-out;
+  border-radius: 15px;
+}
+.card:hover {
+  height: 320px;
+  border: solid 5px rgb(0, 128, 100);
 }
 
-.card-container:hover {
-  transform: scale(1.05);
+ .card .image {
+  min-height: 200px;
+  background-color: teal;
+  border: solid 5px rgb(0, 128, 68);
+  position: relative;
+  top: -40%;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.card .content {
+  border: solid 5px rgb(4, 128, 0);
+  position: relative;
+  top: -140px;
+  color: #111;
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+ .card:hover .content {
+  border: solid 5px rgb(66, 33, 33);
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0.2s;
 }
