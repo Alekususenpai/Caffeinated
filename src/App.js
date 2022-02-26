@@ -29,12 +29,14 @@ class App extends Component {
     const filteredCoffees = coffee.filter(coffees => coffees.title.toLowerCase().includes(searchBar.toLowerCase()))
 
     return (
-      <section>
+
       <div className="background">
-        <SearchBar placeholder='Type a coffee' handleChange={this.handleChange} />
+        <div className="circle"> 
+          <SearchBar placeholder='Type a coffee' handleChange={this.handleChange} />
         </div>
-          <CardList data={filteredCoffees}>Hello there</CardList>
-      </section>
+        <CardList data={filteredCoffees}></CardList>
+        
+      </div>
     )
   }
 }
