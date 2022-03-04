@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Caffeinated/static/css/main.01a6a454.css",
+    "main.js": "/Caffeinated/static/js/main.30de8921.js",
+    "static/media/background2.jpg": "/Caffeinated/static/media/background2.02ec8d30e49fa95d498d.jpg",
+    "static/media/coffeecup.jpg": "/Caffeinated/static/media/coffeecup.ebe375e5bee297c05280.jpg",
+    "index.html": "/Caffeinated/index.html",
+    "main.01a6a454.css.map": "/Caffeinated/static/css/main.01a6a454.css.map",
+    "main.30de8921.js.map": "/Caffeinated/static/js/main.30de8921.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.01a6a454.css",
+    "static/js/main.30de8921.js"
+  ]
+}
