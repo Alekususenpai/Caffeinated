@@ -2,7 +2,7 @@ import { Component } from 'react'
 import './App.css';
 import CardList from './components/CardList/CardList';
 import SearchBar from './components/SearchBar/SearchBar';
-import CoffeeImg from './coffeecup.jpg'
+import Particle from './components/Particle/Particle';
 
 class App extends Component {
   constructor(props) {
@@ -15,10 +15,13 @@ class App extends Component {
 
 
   componentDidMount() {
-    fetch('https://api.sampleapis.com/coffee/hot')
-      .then(response => response.json())
-      .then(data => this.setState({ coffee: data }))
-      
+    fetch('https://api.sampleapis.com/coffee/hot').then((response) => {
+      if (response.ok) {
+        return response.json();
+      } console.log('Something went wrong')
+    }).then((data) => { this.setState({ coffee: data }) }).catch((error) => {
+      console.log('BREAK YOURSELF. GIVE ME YOUR GODAMN NUMBER')
+    });
   }
 
   handleChange = (e) => {
@@ -28,18 +31,19 @@ class App extends Component {
   render() {
     const { coffee, searchBar } = this.state;
     const filteredCoffees = coffee.filter(coffees => coffees.title.toLowerCase().includes(searchBar.toLowerCase()))
-
-
     return (
       <div className="background">
-        <div className="particles"><h1>Welcome to Caffeinated.</h1><img src={CoffeeImg} alt='coffee'></img></div>
+        <Particle />
         <div className="banner">
-          <SearchBar placeholder='Type a coffee' handleChange={this.handleChange} />
+          <h2>I don't need an inspirational quote.
+            <br /> I need coffee.
+          </h2>
+          <SearchBar placeholder='Type one' handleChange={this.handleChange} />
         </div>
         <CardList data={filteredCoffees}></CardList>
       </div>
 
-     
+
     )
   }
 }

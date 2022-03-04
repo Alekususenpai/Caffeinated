@@ -1,20 +1,25 @@
 import React from "react";
 import "./Card.css";
+import { GiCoffeeBeans } from "react-icons/gi";
 
 function Card({ coffee }) {
   return (
-      <div className="card">
-        <div className="image">image should be her ok lets' seeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeszdfbsfbdsfbssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssee</div>
-        <div className="content">
-          <h2>{coffee.title}</h2>
-          <p>{coffee.description}</p>
-          <ol>
-            {coffee.ingredients.map((ingredients) => (
-              <li>{ingredients}</li>
-            ))}
-          </ol>
-        </div>
-      </div>
+    <div class="card">
+      <h2>
+        <span>
+          <GiCoffeeBeans />
+        </span>{" "}
+        {coffee.title}
+      </h2>
+      <p>{coffee.description}</p>
+      <ol>
+        {" "}
+        Ingredients:
+        {coffee.ingredients.map((ingredients) => (
+          <li>{ingredients}</li>
+        ))}
+      </ol>
+    </div>
   );
 }
 

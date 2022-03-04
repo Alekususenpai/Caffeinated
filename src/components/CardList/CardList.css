@@ -1,3 +1,7 @@
 .cardlist{
-    border: solid 5px rgb(0, 255, 98);
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 3em auto;
+    justify-content: space-evenly;
 }
